@@ -1,0 +1,57 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="WindowTitle">Slnx Merger — Compare and merge .slnx solutions</sys:String>
+  <sys:String x:Key="RootSolutionName">Solution</sys:String>
+
+  <sys:String x:Key="GroupLeftHeader">Left solution (reference source)</sys:String>
+  <sys:String x:Key="GroupRightHeader">Right solution (to update)</sys:String>
+  <sys:String x:Key="BrowseButton">Browse…</sys:String>
+  <sys:String x:Key="LeftPathTooltip">Path to the first .slnx file (drag and drop supported)</sys:String>
+  <sys:String x:Key="RightPathTooltip">Path to the second .slnx file (drag and drop supported)</sys:String>
+
+  <sys:String x:Key="CompareButton">🔍 Compare</sys:String>
+  <sys:String x:Key="OnlyCommonRoots">Ignore non-common root folders</sys:String>
+  <sys:String x:Key="OnlyCommonRootsTooltip">Compares deeply only first-level folders present in both solutions (e.g., SDK), and ignores folders specific to one solution (e.g., Webapp, MobileApp).</sys:String>
+  <sys:String x:Key="OnlyDiff">Show differences only</sys:String>
+  <sys:String x:Key="CheckAll">Check all</sys:String>
+  <sys:String x:Key="UncheckAll">Uncheck all</sys:String>
+
+  <sys:String x:Key="LegendOnlyLeft"> Left only    </sys:String>
+  <sys:String x:Key="LegendOnlyRight"> Right only    </sys:String>
+  <sys:String x:Key="LegendSame"> Same</sys:String>
+
+  <sys:String x:Key="ApplyToLeftTooltip">For each checked item: add to LEFT what exists only on the right, and remove from LEFT what exists only on the left.</sys:String>
+  <sys:String x:Key="ApplyToLeftButton">⬅ Apply checked changes to the LEFT</sys:String>
+  <sys:String x:Key="ApplyToRightTooltip">For each checked item: add to RIGHT what exists only on the left, and remove from RIGHT what exists only on the right.</sys:String>
+  <sys:String x:Key="ApplyToRightButton">Apply checked changes to the RIGHT ➡</sys:String>
+
+  <sys:String x:Key="InitialStatus">Select two .slnx files then click “Compare”.</sys:String>
+  <sys:String x:Key="LanguageLabel">Language:</sys:String>
+  <sys:String x:Key="LanguageFrench">French</sys:String>
+  <sys:String x:Key="LanguageEnglish">English</sys:String>
+  <sys:String x:Key="OpenDialogFilter">XML solution (*.slnx)|*.slnx|All files (*.*)|*.*</sys:String>
+  <sys:String x:Key="OpenDialogTitle">Choose a .slnx file</sys:String>
+
+  <sys:String x:Key="StatusSelectBoth">Please select the two .slnx files to compare.</sys:String>
+  <sys:String x:Key="StatusFileNotFound">File not found: {0}</sys:String>
+  <sys:String x:Key="StatusSameFile">Both paths point to the same file.</sys:String>
+  <sys:String x:Key="LoadErrorTitle">Load error</sys:String>
+  <sys:String x:Key="NoDiffSummary">✅ No differences in compared folders.</sys:String>
+  <sys:String x:Key="DiffSummary">{0} item(s) only on the left, {1} only on the right.</sys:String>
+  <sys:String x:Key="IgnoredRootsSummary">   |   Ignored specific root folders: {0}.</sys:String>
+  <sys:String x:Key="DeltaSummary">Δ left: {0}   |   Δ right: {1}</sys:String>
+  <sys:String x:Key="StatusRunComparisonFirst">Run a comparison first.</sys:String>
+  <sys:String x:Key="StatusNoCheckedItems">No checked items to apply in this direction.</sys:String>
+
+  <sys:String x:Key="MergeConfirmMessage">The file “{0}” will be modified:\n\n  • {1} project(s)/file(s) added (from {2})\n  • {3} project(s)/file(s) removed\n\nA backup copy “{0}.bak” will be created.\n\nContinue?</sys:String>
+  <sys:String x:Key="MergeConfirmTitle">Confirm merge</sys:String>
+  <sys:String x:Key="WriteErrorTitle">Write error</sys:String>
+  <sys:String x:Key="UpdateSuccess">✅ “{0}” updated: {1} addition(s), {2} removal(s). Backup: {0}.bak.   {3}</sys:String>
+
+  <sys:String x:Key="StatusLabelOnlyLeft">left only</sys:String>
+  <sys:String x:Key="StatusLabelOnlyRight">right only</sys:String>
+  <sys:String x:Key="SideLeft">left</sys:String>
+  <sys:String x:Key="SideRight">right</sys:String>
+  <sys:String x:Key="IgnoredRootItem">{0} ({1})</sys:String>
+</ResourceDictionary>

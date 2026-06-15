@@ -1,0 +1,57 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <sys:String x:Key="WindowTitle">Slnx Merger — Comparaison et fusion de solutions .slnx</sys:String>
+  <sys:String x:Key="RootSolutionName">Solution</sys:String>
+
+  <sys:String x:Key="GroupLeftHeader">Solution de gauche (source de référence)</sys:String>
+  <sys:String x:Key="GroupRightHeader">Solution de droite (à mettre à jour)</sys:String>
+  <sys:String x:Key="BrowseButton">Parcourir…</sys:String>
+  <sys:String x:Key="LeftPathTooltip">Chemin du premier fichier .slnx (glisser-déposer possible)</sys:String>
+  <sys:String x:Key="RightPathTooltip">Chemin du second fichier .slnx (glisser-déposer possible)</sys:String>
+
+  <sys:String x:Key="CompareButton">🔍 Comparer</sys:String>
+  <sys:String x:Key="OnlyCommonRoots">Ignorer les dossiers racine non communs</sys:String>
+  <sys:String x:Key="OnlyCommonRootsTooltip">Ne compare en profondeur que les dossiers de premier niveau présents dans les deux solutions (ex: SDK), et ignore ceux propres à une seule solution (ex: Webapp, MobileApp).</sys:String>
+  <sys:String x:Key="OnlyDiff">Afficher uniquement les différences</sys:String>
+  <sys:String x:Key="CheckAll">Tout cocher</sys:String>
+  <sys:String x:Key="UncheckAll">Tout décocher</sys:String>
+
+  <sys:String x:Key="LegendOnlyLeft"> Uniquement à gauche    </sys:String>
+  <sys:String x:Key="LegendOnlyRight"> Uniquement à droite    </sys:String>
+  <sys:String x:Key="LegendSame"> Identique</sys:String>
+
+  <sys:String x:Key="ApplyToLeftTooltip">Pour chaque élément coché : ajoute à GAUCHE ce qui n'existe qu'à droite, et supprime de GAUCHE ce qui n'existe qu'à gauche.</sys:String>
+  <sys:String x:Key="ApplyToLeftButton">⬅ Appliquer les changements cochés vers la GAUCHE</sys:String>
+  <sys:String x:Key="ApplyToRightTooltip">Pour chaque élément coché : ajoute à DROITE ce qui n'existe qu'à gauche, et supprime de DROITE ce qui n'existe qu'à droite.</sys:String>
+  <sys:String x:Key="ApplyToRightButton">Appliquer les changements cochés vers la DROITE ➡</sys:String>
+
+  <sys:String x:Key="InitialStatus">Sélectionnez deux fichiers .slnx puis cliquez sur « Comparer ».</sys:String>
+  <sys:String x:Key="LanguageLabel">Langue :</sys:String>
+  <sys:String x:Key="LanguageFrench">Français</sys:String>
+  <sys:String x:Key="LanguageEnglish">Anglais</sys:String>
+  <sys:String x:Key="OpenDialogFilter">Solution XML (*.slnx)|*.slnx|Tous les fichiers (*.*)|*.*</sys:String>
+  <sys:String x:Key="OpenDialogTitle">Choisir un fichier .slnx</sys:String>
+
+  <sys:String x:Key="StatusSelectBoth">Veuillez sélectionner les deux fichiers .slnx à comparer.</sys:String>
+  <sys:String x:Key="StatusFileNotFound">Fichier introuvable : {0}</sys:String>
+  <sys:String x:Key="StatusSameFile">Les deux chemins pointent vers le même fichier.</sys:String>
+  <sys:String x:Key="LoadErrorTitle">Erreur de chargement</sys:String>
+  <sys:String x:Key="NoDiffSummary">✅ Aucune différence dans les dossiers comparés.</sys:String>
+  <sys:String x:Key="DiffSummary">{0} élément(s) uniquement à gauche, {1} uniquement à droite.</sys:String>
+  <sys:String x:Key="IgnoredRootsSummary">   |   Dossiers racine spécifiques ignorés : {0}.</sys:String>
+  <sys:String x:Key="DeltaSummary">Δ gauche : {0}   |   Δ droite : {1}</sys:String>
+  <sys:String x:Key="StatusRunComparisonFirst">Lancez d'abord une comparaison.</sys:String>
+  <sys:String x:Key="StatusNoCheckedItems">Aucun élément coché à appliquer dans cette direction.</sys:String>
+
+  <sys:String x:Key="MergeConfirmMessage">Le fichier « {0} » va être modifié:\n\n  • {1} projet(s)/fichier(s) ajouté(s) (depuis {2})\n  • {3} projet(s)/fichier(s) supprimé(s)\n\nUne copie de sécurité « {0}.bak » sera créée.\n\nContinuer ?</sys:String>
+  <sys:String x:Key="MergeConfirmTitle">Confirmer la fusion</sys:String>
+  <sys:String x:Key="WriteErrorTitle">Erreur d'écriture</sys:String>
+  <sys:String x:Key="UpdateSuccess">✅ « {0} » mis à jour : {1} ajout(s), {2} suppression(s). Sauvegarde : {0}.bak.   {3}</sys:String>
+
+  <sys:String x:Key="StatusLabelOnlyLeft">uniquement à gauche</sys:String>
+  <sys:String x:Key="StatusLabelOnlyRight">uniquement à droite</sys:String>
+  <sys:String x:Key="SideLeft">gauche</sys:String>
+  <sys:String x:Key="SideRight">droite</sys:String>
+  <sys:String x:Key="IgnoredRootItem">{0} ({1})</sys:String>
+</ResourceDictionary>

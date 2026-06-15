@@ -1,0 +1,71 @@
+# .github/workflows/release.yml
+
+name: Build and Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+
+    env:
+      PROJECT_PATH: src/SlnxMerger.csproj
+      APP_NAME: SlnxMerger
+      CONFIGURATION: Release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Extract version from tag
+        shell: pwsh
+        run: |
+          $tag = "${{ github.ref_name }}"
+          $version = $tag.TrimStart("v")
+
+          echo "VERSION=$version" >> $env:GITHUB_ENV
+          echo "Version: $version"
+
+      - name: Restore
+        run: dotnet restore $env:PROJECT_PATH
+
+      - name: Publish
+        shell: pwsh
+        run: |
+          dotnet publish $env:PROJECT_PATH `
+            -c $env:CONFIGURATION `
+            -r win-x64 `
+            --self-contained true `
+            -p:PublishSingleFile=true `
+            -p:IncludeNativeLibrariesForSelfExtract=true `
+            -p:Version=$env:VERSION `
+            -p:AssemblyVersion=$env:VERSION `
+            -p:FileVersion=$env:VERSION `
+            -p:InformationalVersion=$env:VERSION `
+            -o publish
+
+      - name: Zip release
+        shell: pwsh
+        run: |
+          Compress-Archive -Path publish/* -DestinationPath "$env:APP_NAME-$env:VERSION-win-x64.zip"
+
+      - name: Create GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" `
+            "$env:APP_NAME-$env:VERSION-win-x64.zip" `
+            --title "$env:APP_NAME $env:VERSION" `
+            --notes "Release $env:VERSION"

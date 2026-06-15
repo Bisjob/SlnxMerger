@@ -1,0 +1,28 @@
+<Application x:Class="SlnxMerger.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Color x:Key="Color.MainBackground">#0B0E23</Color>
+        <Color x:Key="Color.PanelSurface">#141A35</Color>
+        <Color x:Key="Color.PrimaryIdentity">#2D1A54</Color>
+        <Color x:Key="Color.InteractiveAccent">#1E46A3</Color>
+        <Color x:Key="Color.ActionHover">#00E5FF</Color>
+        <Color x:Key="Color.SecondaryAccent">#D600FF</Color>
+        <Color x:Key="Color.TextForeground">#FFFFFF</Color>
+        <Color x:Key="Color.SubtleDivider">#1F3F82</Color>
+        <Color x:Key="Color.Success">#00D68F</Color>
+        <Color x:Key="Color.Danger">#FF4D6D</Color>
+
+        <SolidColorBrush x:Key="Brush.MainBackground" Color="{StaticResource Color.MainBackground}" />
+        <SolidColorBrush x:Key="Brush.PanelSurface" Color="{StaticResource Color.PanelSurface}" />
+        <SolidColorBrush x:Key="Brush.PrimaryIdentity" Color="{StaticResource Color.PrimaryIdentity}" />
+        <SolidColorBrush x:Key="Brush.InteractiveAccent" Color="{StaticResource Color.InteractiveAccent}" />
+        <SolidColorBrush x:Key="Brush.ActionHover" Color="{StaticResource Color.ActionHover}" />
+        <SolidColorBrush x:Key="Brush.SecondaryAccent" Color="{StaticResource Color.SecondaryAccent}" />
+        <SolidColorBrush x:Key="Brush.TextForeground" Color="{StaticResource Color.TextForeground}" />
+        <SolidColorBrush x:Key="Brush.SubtleDivider" Color="{StaticResource Color.SubtleDivider}" />
+        <SolidColorBrush x:Key="Brush.Success" Color="{StaticResource Color.Success}" />
+        <SolidColorBrush x:Key="Brush.Danger" Color="{StaticResource Color.Danger}" />
+    </Application.Resources>
+</Application>
